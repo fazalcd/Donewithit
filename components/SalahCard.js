@@ -1,8 +1,12 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
+
 const SalahCard = ({ leftText='ooo', rightText='ppp'}) => {
-  console.log('popopop')
+  let SunCalc = require('suncalc');
+  let times = SunCalc.getTimes(new Date(), 36.37, -94.21);
+  let sunsetStr = times.sunset.getHours() + ':' + times.sunset.getMinutes();
+  
   return (
     <View style={styles.container}>
       <View style={styles.card}>
@@ -10,7 +14,7 @@ const SalahCard = ({ leftText='ooo', rightText='ppp'}) => {
           <Text style={styles.leftText}>{leftText}</Text>
         </View>
         <View style={styles.rightContainer}>
-          <Text style={styles.rightText}>{rightText}</Text>
+          <Text style={styles.rightText}>{leftText == 'Maghrib'? sunsetStr : rightText}</Text>        
         </View>
       </View>
     </View>
