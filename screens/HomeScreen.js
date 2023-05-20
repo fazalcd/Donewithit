@@ -3,6 +3,7 @@ import {
   SafeAreaView,
   StyleSheet,
   Text,
+  ScrollView,
   TouchableWithoutFeedback,
   Alert,
   TouchableOpacity,
@@ -15,6 +16,7 @@ import {
 import { myHijriDateFormat } from "../components/ArabicCalendar";
 import { salahDetails } from "../Data/salahDetails";
 import SalahCard from "../components/SalahCard";
+import AnnouncementComponent from "../components/AnnouncementComponent";
 
 export default function HomeScreen() {
   const today = new Date();
@@ -31,30 +33,16 @@ export default function HomeScreen() {
   };
 
   return (
+    <ScrollView>
     <SafeAreaView style={styles.container}>
-      {/* <Text>Hello!</Text> */}
-      <SafeAreaView style={styles.dateContainer}>
+      <View style={styles.dateContainer}>
         <Text style={styles.arabicDate}>{arabicDate}</Text>
         <Text style={styles.date}>{date}</Text>
-      </SafeAreaView>
+      </View>
+      <AnnouncementComponent/>
       {salahTiles()}
-      {/* <SalahCard/> */}
-      {/* <Button 
-        color="orange"
-        title ="Donations" 
-        onPress={()=>{ Alert.alert("Donations","What would you like to donate for?", [
-          {'text': "Zakaat", onPress:()=> {console.log('zakaat')}},
-          {'text': "Sadqah", onPress:()=> {console.log('sadqah')}},
-          {'text': "Masajid", onPress:()=> {console.log('Masajid')}}
-        ])}}>
-      </Button> */}
-      {/* <TouchableOpacity
-        onPress={()=> {console.log('image tapped')}}
-      >
-      <Image blurRadius= {0} style={styles.logo} source={require("../assets/logo.png")}/>
-      </TouchableOpacity>
-      <StatusBar style="auto" /> */}
     </SafeAreaView>
+    </ScrollView>
   );
 }
 

@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 
 const SalahCard = ({ leftText='ooo', rightText='ppp'}) => {
   let SunCalc = require('suncalc');
   let times = SunCalc.getTimes(new Date(), 36.37, -94.21);
-  let sunsetStr = times.sunset.getHours() + ':' + times.sunset.getMinutes();
+
+  let sunsetHour = times.sunset.getHours();
+  let sunsetMinutes = times.sunset.getMinutes();
+
+  if(sunsetMinutes > 55) {
+  
+    sunsetMinutes = sunsetMinutes + 5 - 60
+    sunsetHour = sunsetHour + 1
+  } else {
+    sunsetMinutes = sunsetMinutes + 5
+  }
+
+  const sunsetStr = sunsetHour + ':' + sunsetMinutes
   
   return (
     <View style={styles.container}>
@@ -25,6 +37,7 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 1
   },
   card: {
     flexDirection: 'row',
@@ -37,6 +50,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.8,
     shadowRadius: 2,
     elevation: 3,
+    width:'95%'
   },
   leftContainer: {
     flex: 1,
