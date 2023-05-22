@@ -4154,6 +4154,13 @@ expo-constants@~14.2.0, expo-constants@~14.2.1:
     "@expo/config" "~8.0.0"
     uuid "^3.3.2"
 
+expo-device@^5.2.1:
+  version "5.2.1"
+  resolved "https://npme.walmart.com/expo-device/-/expo-device-5.2.1.tgz"
+  integrity sha512-ZWGph+fGQPxo9v2e0YygPb45Hl+ZR3mh4tpLY5AOYK/sNjQy+Lu3T/sLGIdi2TOcYNL2oZwzZ6eGvwVYmdIfLg==
+  dependencies:
+    ua-parser-js "^0.7.33"
+
 expo-file-system@~15.2.0, expo-file-system@~15.2.2:
   version "15.2.2"
   resolved "https://npme.walmart.com/expo-file-system/-/expo-file-system-15.2.2.tgz"
@@ -4172,6 +4179,11 @@ expo-keep-awake@~12.0.1:
   version "12.0.1"
   resolved "https://npme.walmart.com/expo-keep-awake/-/expo-keep-awake-12.0.1.tgz"
   integrity sha512-hqeCnb4033TyuZaXs93zTK7rjVJ3bywXATyMmKmKkLEsH2PKBAl/VmjlCOPQL/2Ncqz6aj7Wo//tjeJTARBD4g==
+
+expo-location@~15.1.1:
+  version "15.1.1"
+  resolved "https://npme.walmart.com/expo-location/-/expo-location-15.1.1.tgz"
+  integrity sha512-hoKRlmi6Ya+NeZ72Zt385SDcSsIDpJI60TCBVO+Hc9xfKA9Hyminyyo5WiwI8J03igmPTCl8Y37MxBNKY9AWkg==
 
 expo-modules-autolinking@>=0.8.1, expo-modules-autolinking@1.2.0:
   version "1.2.0"
@@ -8477,6 +8489,11 @@ sudo-prompt@9.1.1:
   resolved "https://npme.walmart.com/sudo-prompt/-/sudo-prompt-9.1.1.tgz"
   integrity sha512-es33J1g2HjMpyAhz8lOR+ICmXXAqTuKbuXuUWLhOLew20oN9oUCgCJx615U/v7aioZg7IX5lIh9x34vwneu4pA==
 
+suncalc@^1.9.0:
+  version "1.9.0"
+  resolved "https://npme.walmart.com/suncalc/-/suncalc-1.9.0.tgz"
+  integrity sha512-vMJ8Byp1uIPoj+wb9c1AdK4jpkSKVAywgHX0lqY7zt6+EWRRC3Z+0Ucfjy/0yxTVO1hwwchZe4uoFNqrIC24+A==
+
 supports-color@^5.3.0:
   version "5.5.0"
   resolved "https://npme.walmart.com/supports-color/-/supports-color-5.5.0.tgz"
@@ -8769,7 +8786,7 @@ type-is@~1.6.18:
     media-typer "0.3.0"
     mime-types "~2.1.24"
 
-ua-parser-js@^0.7.30:
+ua-parser-js@^0.7.30, ua-parser-js@^0.7.33:
   version "0.7.35"
   resolved "https://npme.walmart.com/ua-parser-js/-/ua-parser-js-0.7.35.tgz"
   integrity sha512-veRf7dawaj9xaWEu9HoTVn5Pggtc/qj+kqTOFvNiN1l0YdxwC1kvel57UCjThjGa3BHBihE8/UJAHI+uQHmd/g==

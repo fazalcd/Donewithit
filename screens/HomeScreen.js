@@ -16,6 +16,7 @@ import {
 import { myHijriDateFormat } from "../components/ArabicCalendar";
 import { salahDetails } from "../Data/salahDetails";
 import SalahCard from "../components/SalahCard";
+import Route from "../components/Route";
 import AnnouncementComponent from "../components/AnnouncementComponent";
 
 export default function HomeScreen() {
@@ -41,6 +42,7 @@ export default function HomeScreen() {
       </View>
       <AnnouncementComponent/>
       {salahTiles()}
+      <Route/>
     </SafeAreaView>
     </ScrollView>
   );
