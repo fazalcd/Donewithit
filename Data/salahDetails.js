@@ -1,4 +1,4 @@
-export const salahDetails = [
+export const salahDetails = [  
     {
         prayer: "Fajr",
         time: "06:30"
@@ -32,3 +32,11 @@ export const salahDetails = [
         time: "14:30"
     }
 ]
+
+
+export const masajidDetails = {
+    "bentonville": {
+        "longitude": -94.23469,
+        "latitude":36.37147
+    }
+}
